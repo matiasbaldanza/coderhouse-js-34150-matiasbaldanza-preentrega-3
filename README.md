@@ -10,3 +10,7 @@ Inicialmente, esta pre-entrega asume:
 - Muestra una lista de las órdenes activas (proyectos de clientes)
 - Permite ver el detalle de cada orden.
 - Incluye algunas opciones de configuración que se almacenan en LocalStorage (modo oscuro, idioma)
+
+> En [esta página](https://matiasbaldanza.github.io/coderhouse-js-34150-matiasbaldanza-preentrega-3/) está disponible el demo.
+
+- [Enlace al repositorio](https://github.com/matiasbaldanza/coderhouse-js-34150-matiasbaldanza-preentrega-3)
