@@ -1,6 +1,6 @@
-# Pre-Entrega 2 de Matias Baldanza
+# Pre-Entrega 3 de Matias Baldanza
 
-## Curso de Javascript, Comisión 34150 (CoderHouse 2023) <br> Fecha de entrega: 2023-01-28
+## Curso de Javascript, Comisión 34150 (CoderHouse 2023) <br> Fecha de entrega: 2023-02-11
 
 Finalmente tengo una idea de qué quiero armar como aplicación para la entrega final. Voy a hacer un administrador de proyectos freelance, similar a la interfaz de Fiverr.com (que uso a diario como seller).
 
