@@ -46,12 +46,21 @@ body {
     padding: 0;
     font-size: 1.6rem;
     background-color: var(--color-bg);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    overflow: scroll-y;
 }
 
 main {
+    width: calc(100% - calc(var(--gl-spacer) * 2));
     max-width: 780px;
     padding: var(--gl-spacer);
     margin: 0 auto;
+    flex: 1;            /* Mantiene el footer abajo, si no hay suficiente contenido */
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
