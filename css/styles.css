@@ -1,4 +1,5 @@
 @import "_themes.css";
+@import "_inputs.css";
 
 /* 
     Proyecto:   Pre-entrega 3 
@@ -147,42 +148,6 @@ footer {
     justify-content: space-between;
 }
 
-.toggle {
-    padding: calc(var(--gl-spacer) / 3);
-    border: var(--gl-border);
-    border-radius: var(--gl-border-radius);
-    background-color: var(--color-bg);
-
-    display: flex;
-    gap: var(--gl-spacer-half);
-    align-items: center;
-}
-
-select {
-    color: var(--color-text-content);
-    background-color: var(--color-bg);
-    padding: var(--gl-spacer-half);
-    border: var(--gl-border);
-    border-radius: var(--gl-border-radius);
-    font-size: 1.4rem;
-    
-    /* remove default arrow in select */
-    -webkit-appearance: none;
-    appearance: none;
-    
-    /* Custom arrow */
-    padding-right: var(--gl-spacer-double);
-    box-sizing: border-box;
-    background-image: var(--icon-chevron);
-    background-size: 2rem;
-    background-repeat: no-repeat;
-    background-position: right;             /* fallback position */
-    background-position: calc(100% - var(--gl-spacer-half)) center;
-}
-
-input[type="checkbox"] {
-    accent-color: var(--color-text-title);
-}
 
 .summary-text {
     font-weight: 300;
