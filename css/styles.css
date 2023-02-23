@@ -152,6 +152,10 @@ footer {
     border: var(--gl-border);
     border-radius: var(--gl-border-radius);
     background-color: var(--color-bg);
+
+    display: flex;
+    gap: var(--gl-spacer-half);
+    align-items: center;
 }
 
 select {
@@ -174,6 +178,10 @@ select {
     background-repeat: no-repeat;
     background-position: right;             /* fallback position */
     background-position: calc(100% - var(--gl-spacer-half)) center;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--color-text-title);
 }
 
 .summary-text {
