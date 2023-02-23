@@ -1,0 +1,25 @@
+/* -------------------------------------------- COLORS  */
+.dark-theme {
+    --color-bg: #0D1A26;
+    --color-fg: #0e1d2a/* #090D13 */;
+    --color-border: #62646A;
+    
+    --color-text-title: #B3CDE6;
+    --color-text-content: #95979D;
+    --color-text-subtle: #B3CDE6;
+
+    --icon-chevron: url("icon-chevron-down-dark.svg")
+}
+
+.light-theme {
+    --color-bg: #F5F5F5;
+    --color-fg: #FAFAFA;
+    --color-border: #DADBDD;
+    
+    --color-text-title: #222325;
+    --color-text-content: #62646A;
+    --color-text-subtle: #95979d;
+    
+    --icon-chevron: url("icon-chevron-down-light.svg")
+}
+

@@ -1,3 +1,5 @@
+@import "_themes.css";
+
 /* 
     Proyecto:   Pre-entrega 3 
                 Matías Baldanza - matiasbaldanza@gmail.com
@@ -11,27 +13,6 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-/* -------------------------------------------- COLORS  */
-.dark-theme {
-    --color-bg: #0D1A26;
-    --color-fg: #0e1d2a/* #090D13 */;
-    --color-border: #62646A;
-    
-    --color-text-title: #B3CDE6;
-    --color-text-content: #95979D;
-    --color-text-subtle: #B3CDE6;
-}
-
-.light-theme {
-    --color-bg: #F5F5F5;
-    --color-fg: #FAFAFA;
-    --color-border: #DADBDD;
-
-    --color-text-title: #222325;
-    --color-text-content: #62646A;
-    --color-text-subtle: #95979d;
-}
 
 :root {
 /* -------------------------------------------- FONTS  */
@@ -180,6 +161,19 @@ select {
     border: var(--gl-border);
     border-radius: var(--gl-border-radius);
     font-size: 1.4rem;
+    
+    /* remove default arrow in select */
+    -webkit-appearance: none;
+    appearance: none;
+    
+    /* Custom arrow */
+    padding-right: var(--gl-spacer-double);
+    box-sizing: border-box;
+    background-image: var(--icon-chevron);
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    background-position: right;             /* fallback position */
+    background-position: calc(100% - var(--gl-spacer-half)) center;
 }
 
 .summary-text {
