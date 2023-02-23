@@ -1,4 +1,5 @@
 import { initializeDarkMode } from "./src/darkMode.js"
+import { listOrders } from "./src/orders.js"
 
 /* 
     Proyecto:   Pre-entrega 3 
@@ -16,4 +17,5 @@ app()
 
 export function app() {
     initializeDarkMode()
+    listOrders()
 }

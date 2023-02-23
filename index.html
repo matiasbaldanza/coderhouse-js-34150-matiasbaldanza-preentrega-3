@@ -24,14 +24,21 @@
  <body>
    <main>
       <section>
-            <h1>Title</h1>
+         <article class="announcement">
+            <h1>Anuncio</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis eligendi at fuga nihil nam vero dolor ipsam iure officia dolorem neque expedita earum quas, doloremque sed necessitatibus vel repellat! Eum.</p>
+         </article>
       </section>
-      <article>
-            <h2>Title</h2>
-            <h3>Subtitle</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis eligendi at fuga nihil nam vero dolor ipsam iure officia dolorem neque expedita earum quas, doloremque sed necessitatibus vel repellat! Eum.</p>
-      </article>
+      <header>
+         <h2>Active orders: <span data-active-orders-summary class="summary-text"></span></h2>
+         <select data-filter-orders></select>
+      </header>
+      <section id="orders-list">
+         <article></article>
+         <article></article>
+         <article></article>
+         <article></article>
+      </section>
    </main>
 
    <footer>

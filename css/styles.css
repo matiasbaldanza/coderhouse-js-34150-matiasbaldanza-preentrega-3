@@ -15,7 +15,7 @@
 /* -------------------------------------------- COLORS  */
 .dark-theme {
     --color-bg: #0D1A26;
-    --color-fg: #090D13;
+    --color-fg: #0e1d2a/* #090D13 */;
     --color-border: #62646A;
     
     --color-text-title: #B3CDE6;
@@ -52,16 +52,19 @@
     box-sizing: border-box;
 }
 
+body {
+    transition: 150ms;
+}
+
 /* --------------------------------------- TYPOGRAPHY  */ 
 h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-title);
     font-weight: 500;
-    margin-top: 0;
-    margin-bottom: var(--gl-spacer-half);
+    margin: 0;
 }
 
 h1 { font-size: 2.8rem; }
-h2 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
 h3 { font-size: 1.6rem; font-weight: 300 }
 
 p {
@@ -105,13 +108,39 @@ main {
 
 section, article {
     min-height: 100px; /* TEMP */
-    width: 100%;
+}
 
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--gl-spacer);
+}
+
+header {
     background-color: var(--color-fg);
+
+}
+
+article, header { 
+    width: 100%;
     border: var(--gl-border);
     border-radius: var(--gl-border-radius);
-
     padding: var(--gl-spacer-half) var(--gl-spacer);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gl-spacer);
+}
+
+article {
+    background-color: var(--color-fg);
+}
+
+article.announcement {
+    background-color: inherit;
 }
 
 footer {
@@ -144,6 +173,11 @@ footer {
     background-color: var(--color-bg);
 }
 
-.dark-mode-toggle {
+select {
+    height: 3rem;
+}
 
+.summary-text {
+    font-weight: 300;
+    font-size: 1.6rem;
 }
