@@ -1,25 +1,30 @@
-// Si el tema no está seteado en localStorage, setear el tema preferido del sistema
-let darkModeOn = JSON.parse(localStorage.getItem('dark-mode-on')) 
-                        ?? window.matchMedia("(prefers-color-scheme: dark)").matches 
+import { readLS, setLS } from "./localStorage.js"
 
-// DOM elements
+// GLOBALS
+const darkModeConfigName = 'dark-mode-on'
+
+// DOM elements y event listeners
 const $darkModeOnToggle = document.querySelector('#dark-mode-toggle')
-
-// utilities
+$darkModeOnToggle.addEventListener('change', toggleDarkMode )
 const updateDarkModeToggle = () => $darkModeOnToggle.checked = darkModeOn
-const storeDarkModeLS = () => localStorage.setItem('dark-mode-on', JSON.stringify(darkModeOn))
+
+// utils tema oscuro
+const getBrowserDarkModePref = () => window.matchMedia("(prefers-color-scheme: dark)").matches 
 const switchDarkMode = () => document.documentElement.className = darkModeOn 
                                                                     ? 'dark-theme' 
                                                                     : 'light-theme'
+const readDarkModeLS = () => readLS(darkModeConfigName)
+const storeDarkModeLS = () => setLS(darkModeConfigName, darkModeOn)
+
+// Si el tema oscuro no está seteado en localStorage, 
+// setear modo oscuro según las preferencias del sistema
+let darkModeOn = readDarkModeLS() ?? getBrowserDarkModePref()
 
 export function initializeDarkMode() {
     switchDarkMode()
     updateDarkModeToggle()
     storeDarkModeLS() 
 }
-
-// Event listeners
-$darkModeOnToggle.addEventListener('change', toggleDarkMode )
 
 function toggleDarkMode(event) {
     darkModeOn = !darkModeOn
