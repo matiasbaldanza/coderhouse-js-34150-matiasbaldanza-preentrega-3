@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 @import "_themes.css";
 @import "_inputs.css";
 
@@ -13,7 +15,6 @@
     Sitio:      https://matiasbaldanza.github.io/coderhouse-js-34150-matiasbaldanza-preentrega-3/
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root {
 /* -------------------------------------------- FONTS  */
@@ -121,8 +122,13 @@ article {
     background-color: var(--color-fg);
 }
 
+article > :last-child {
+    margin-bottom: 0;
+}
+
 article.announcement {
     background-color: inherit;
+    color: var(--color-text-subtle);
 }
 
 footer {
