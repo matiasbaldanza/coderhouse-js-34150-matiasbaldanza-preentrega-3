@@ -1,3 +1,5 @@
+import { initializeDarkMode } from "./src/darkMode.js"
+
 /* 
     Proyecto:   Pre-entrega 3 
                 Matías Baldanza - matiasbaldanza@gmail.com
@@ -9,3 +11,9 @@
     Repo:       https://github.com/matiasbaldanza/coderhouse-js-34150-matiasbaldanza-preentrega-3
     Sitio:      https://matiasbaldanza.github.io/coderhouse-js-34150-matiasbaldanza-preentrega-3/
 */
+
+app()
+
+export function app() {
+    initializeDarkMode()
+}

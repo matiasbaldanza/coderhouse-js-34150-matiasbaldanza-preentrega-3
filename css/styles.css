@@ -12,15 +12,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-:root {
-    box-sizing: border-box;
-
-/* -------------------------------------------- FONTS  */
-    font-size: 10px;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 300;
-
 /* -------------------------------------------- COLORS  */
+.dark-theme {
+    --color-bg: #0D1A26;
+    --color-fg: #090D13;
+    --color-border: #62646A;
+    
+    --color-text-title: #B3CDE6;
+    --color-text-content: #95979D;
+    --color-text-subtle: #B3CDE6;
+}
+
+.light-theme {
     --color-bg: #F5F5F5;
     --color-fg: #FAFAFA;
     --color-border: #DADBDD;
@@ -28,11 +31,44 @@
     --color-text-title: #222325;
     --color-text-content: #62646A;
     --color-text-subtle: #95979d;
+}
+
+:root {
+/* -------------------------------------------- FONTS  */
+    font-size: 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
 
 /* -------------------------------------------- BOXES  */
     --gl-border-radius: 4px;
     --gl-border: 1px solid var(--color-border);
     --gl-spacer: 20px;
+    --gl-spacer-half: calc(var(--gl-spacer) / 2);
+    --gl-spacer-double: calc(var(--gl-spacer) * 2);
+}
+
+/* ------------------------------------------- RESETS  */
+* {
+    box-sizing: border-box;
+}
+
+/* --------------------------------------- TYPOGRAPHY  */ 
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-title);
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: var(--gl-spacer-half);
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.6rem; font-weight: 300 }
+
+p {
+    color: var(--color-text-content);
+    margin-top: 0;
+    margin-bottom: var(--gl-spacer-half);
+    font-size: 1.4rem;
 }
 
 .logo {
@@ -55,7 +91,7 @@ body {
 }
 
 main {
-    width: calc(100% - calc(var(--gl-spacer) * 2));
+    width: calc(100% - var(--gl--spacer-double));
     max-width: 780px;
     padding: var(--gl-spacer);
     margin: 0 auto;
@@ -68,16 +104,17 @@ main {
 }
 
 section, article {
-    height: 100px; /* TEMP */
+    min-height: 100px; /* TEMP */
     width: 100%;
 
     background-color: var(--color-fg);
     border: var(--gl-border);
     border-radius: var(--gl-border-radius);
+
+    padding: var(--gl-spacer-half) var(--gl-spacer);
 }
 
 footer {
-    height: 300px; /* TEMP */
     margin-top: calc(var(--gl-spacer) * 3);
     background-color: var(--color-fg);
     border: var(--gl-border);
@@ -105,4 +142,8 @@ footer {
     border: var(--gl-border);
     border-radius: var(--gl-border-radius);
     background-color: var(--color-bg);
+}
+
+.dark-mode-toggle {
+
 }
