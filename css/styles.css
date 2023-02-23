@@ -134,7 +134,7 @@ article.announcement {
 footer {
     margin-top: calc(var(--gl-spacer) * 3);
     background-color: var(--color-fg);
-    border: var(--gl-border);
+    border-top: var(--gl-border);
     padding: var(--gl-spacer);
 
     display: flex;
