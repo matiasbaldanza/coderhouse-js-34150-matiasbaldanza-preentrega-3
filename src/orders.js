@@ -1,17 +1,13 @@
+import { setOrderFilters } from "./orderFilters.js"
 import { orders } from "./data.js"
 
 // DOM elements
-const $ordersFilterSelect = document.querySelector('data-filter-orders')
 const $activeOrdersSummary = document.querySelector('[data-active-orders-summary]')
+const $ordersFilterSelect = document.querySelector('[data-filter-orders]')
+
 const inactiveOrdersDefinition = ['canceled', 'completed']
 
-// Globals
-const orderCategories = orders.reduce((accum, order) => {
-    if (!accum.includes(order.status)) {
-        accum.push(order.status)
-    }
-    return accum
-}, [])
+// Orders summary
 
 const activeOrdersSummary = orders.reduce((summary, order) => {
     let activeOrdersCount, activeOrdersTotalAmount = 0
@@ -27,9 +23,11 @@ const activeOrdersSummaryText = `${activeOrdersSummary.count} ($ ${activeOrdersS
 
 export function listOrders() {
     summarizeOrders()
+    setOrderFilters($ordersFilterSelect)
 }
 
 function summarizeOrders() {
-    console.log(activeOrdersSummary)
     $activeOrdersSummary.textContent = activeOrdersSummaryText
 }
+
+

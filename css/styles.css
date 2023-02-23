@@ -174,10 +174,16 @@ footer {
 }
 
 select {
-    height: 3rem;
+    color: var(--color-text-content);
+    background-color: var(--color-bg);
+    padding: var(--gl-spacer-half);
+    border: var(--gl-border);
+    border-radius: var(--gl-border-radius);
+    font-size: 1.4rem;
 }
 
 .summary-text {
     font-weight: 300;
     font-size: 1.6rem;
+    color: var(--color-text-content)
 }
